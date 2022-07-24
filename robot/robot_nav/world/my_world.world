@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sdf version="1.6">
+  <world name="default">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <name>floor_plan</name>
+      <uri>model://floorplan</uri>
+      <pose frame=''>0 -3 0 0 0 0</pose>
+      <scale>1 1 1</scale>
+    </include>
+
+    <include>
+      <name>table</name>
+      <uri>model://cafe_table</uri>
+      <pose frame=''>3 -5.5 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>chair_0</name>
+      <uri>model://office_chair</uri>
+      <pose frame=''>2 -5.7 0 0 0 1.5708</pose>
+    </include>
+
+    <include>
+      <name>chair_1</name>
+      <uri>model://office_chair</uri>
+      <pose frame=''>3.2 -6.5 0 0 0 3.14159</pose>
+    </include>
+
+    <include>
+      <name>bookshelf</name>
+      <uri>model://bookshelf_large</uri>
+      <pose frame=''>3.8 -3.1 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>desk</name>
+      <uri>model://desk_brown</uri>
+      <pose frame=''>-3.9 -7.2 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>chair_2</name>
+      <uri>model://office_chair</uri>
+      <pose frame=''>-3.8 -6.2 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>office_sofa</name>
+      <uri>model://sofa_set_2</uri>
+      <pose frame=''>-3.9 -3.35 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>vase_0</name>
+      <uri>model://vase_large_3</uri>
+      <pose frame=''>-2.5 -3.3 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>vase_1</name>
+      <uri>model://vase_large_3</uri>
+      <pose frame=''>1 -7 0 0 0 0</pose>
+    </include>
+
+
+    <include>
+      <name>table</name>
+      <uri>model://cafe_table</uri>
+      <pose frame=''>-3 -0.5 0 0 0 0</pose>
+    </include>
+
+
+    <include>
+      <name>sofa_1</name>
+      <uri>model://chair_set_3</uri>
+      <pose frame=''>-3.2 1.1 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>sofa_2</name>
+      <uri>model://chair_set_3</uri>
+      <pose frame=''>-4.3 -0.5 0 0 0 1.5708</pose>
+    </include>
+
+    <include>
+      <name>lamp</name>
+      <uri>model://lamp_large</uri>
+      <pose frame=''>1.1 1.1 0 0 0 1.5708</pose>
+    </include>
+
+    <include>
+      <name>drawer</name>
+      <uri>model://drawer_white</uri>
+      <pose frame=''>-4.2 -2.7 0 0 0 1.5708</pose>
+    </include>
+
+    <include>
+      <name>drawer_0</name>
+      <uri>model://drawer_white</uri>
+      <pose frame=''>1.5 -3.1 0 0 0 -1.5708</pose>
+    </include>
+
+    <include>
+      <name>person</name>
+      <uri>model://person_standing</uri>
+      <pose frame=''>-4 -5 0 0 0 1.5708</pose>
+    </include>
+
+  </world>
+</sdf>

@@ -1,0 +1,27 @@
+<launch>
+
+    <arg name="x" default="0"/>
+    <arg name="y" default="0"/>
+    <arg name="z" default="0.47"/>
+  <!-- Load the CougarBot URDF model into the parameter server -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find robot_nav)/urdf/robot.urdf.xacro" />
+  <!-- Start Gazebo with an empty world -->
+  <arg name="world_name" default="empty"/> 
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  <param name="use_sim_time" value="true"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find robot_nav)/world/my_world.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>  
+  <!-- Spawn a CougarBot in Gazebo, taking the description from the parameter server -->
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model robot_nav -x $(arg x) -y $(arg y) -z $(arg z) -param robot_description" />
+</launch>
